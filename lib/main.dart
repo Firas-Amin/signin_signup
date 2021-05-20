@@ -1,17 +1,14 @@
+
 import 'package:flutter/material.dart';
+import 'MainScreen.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-    );
-  }
+void main() async {
+  debugDisableShadows = false;
+  WidgetsFlutterBinding.ensureInitialized();  // you must initialize the firebase app when using any firebase methods.
+  runApp(MaterialApp(home: MainScreen()));
+
+
 }
 
 
